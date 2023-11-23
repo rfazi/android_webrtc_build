@@ -46,9 +46,9 @@ echo "--------------------------------------------------------------------------
 cd src && ./build/install-build-deps.sh
 
 echo "----------------------------------------------------------------------------------"
-echo "Checkout last version..."
+echo "Checkout M119 version..."
 echo "----------------------------------------------------------------------------------"
-git fetch --all && git checkout origin/master
+git fetch --all && git fetch https://webrtc.googlesource.com/src.git refs/branch-heads/6045 && git checkout -b m119 FETCH_HEAD
 
 echo "----------------------------------------------------------------------------------"
 echo "Preparing compilation environment..."
