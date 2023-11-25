@@ -55,7 +55,7 @@ echo "Preparing compilation environment..."
 echo "----------------------------------------------------------------------------------"
 
 function generateNinjaBuild() {
-  gn gen out/Release_"$1" --args='target_os="android" target_cpu="'"$1"'" target_environment="device" proprietary_codecs=true rtc_use_h264=true is_debug=false symbol_level=1 dcheck_always_on=false is_official_build=true is_unsafe_developer_build=false rtc_build_examples=false rtc_include_tests=false'
+  gn gen out/Release_"$1" --args='target_os="android" target_cpu="'"$1"'" target_environment="device" proprietary_codecs=true rtc_use_h264=true rtc_use_h265=false is_debug=false symbol_level=1 dcheck_always_on=false is_official_build=true is_unsafe_developer_build=false rtc_build_examples=false rtc_include_tests=false'
 }
 
 generateNinjaBuild "arm"
